@@ -70,3 +70,84 @@ select* from student;
 select* from jame;
 select* from instructor;
 select * from instructor_class;
+
+select s.id, s.name, s.birthday, s.gender, s.email, s.point as student
+from student s 
+join class c on s.class_id = c.id;
+
+SELECT 
+  id, name, birthday, gender, email, point, class_id
+FROM 
+  student;
+
+SELECT 
+  id, name, birthday, gender, email, point, class_id
+FROM 
+  student
+where class_id is not null;
+
+select* from student
+where name like '%Hai%' or name like '%Huynh%';
+select* from student
+where point >5;
+
+select* from student
+where name like 'nguyen%' ;
+
+select point, count(*) as students
+from student
+group by point;
+
+select point, count(*) as students
+from student
+where point >5
+group by point;
+
+select point, count(*) as students
+from student
+where point >5
+group by point
+having count(*) >=2;
+
+select*from student
+where class_id = 1;
+
+SELECT s.*
+FROM student s
+JOIN class c ON s.class_id = c.id
+WHERE c.name = 'c1121g1'
+ORDER BY s.name ASC;
+
+SELECT s.*, c.name AS class_name
+FROM student s
+ JOIN class c ON s.class_id = c.id
+WHERE c.name = 'c1121g1'
+ORDER BY s.name ASC;
+
+SELECT s.name, c.name AS class_name
+FROM student s
+LEFT JOIN class c ON s.class_id = c.id;
+
+SELECT s.*, c.name AS class_name
+FROM student s
+LEFT JOIN class c ON s.class_id = c.id;
+
+select *
+from student
+where class_id = (
+  select class_id
+  from student
+  group by class_id
+  order by count(*) desc
+  limit 1
+);
+
+select name, max(point)
+from student
+group by name, point;
+
+select name, avg(point) as avg_point
+from student
+group by name
+order by avg_point desc;
+
