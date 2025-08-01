@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Website Phim Hoạt Hình</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f8ff;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: #ffcc00;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .header img {
+            height: 60px;
+        }
+
+        .head-link {
+            background: #fdd835;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .head-link a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .content {
+            display: flex;
+            margin: 15px 0;
+        }
+
+        .left {
+            width: 30%;
+            background: #fff9c4;
+            padding: 15px;
+        }
+
+        .left ul {
+            list-style: none;
+        }
+
+        .left li {
+            margin-bottom: 10px;
+        }
+
+        .right {
+            width: 70%;
+            padding: 15px;
+            background: #fffde7;
+        }
+
+        .footer {
+            background: #ffecb3;
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+        }
+
+        video, iframe {
+            width: 100%;
+            height: 360px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Logo-Phim-hoat-hinh.png" alt="Logo">
+    </div>
+
+    <div class="head-link">
+        <a href="#">Trang chủ</a>
+        <a href="#">Phim mới</a>
+        <a href="#">Xem nhiều</a>
+        <a href="#">Tìm kiếm</a>
+    </div>
+
+    <div class="content">
+        <div class="left">
+            <ul>
+                <li><a href="#">Tom & Jerry</a></li>
+                <li><a href="#">Doraemon</a></li>
+                <li><a href="#">SpongeBob</a></li>
+                <li><a href="#">Phim YouTube</a></li>
+            </ul>
+        </div>
+
+        <div class="right">
+            <h3>Video mặc định (HTML5)</h3>
+            <video controls>
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                Trình duyệt không hỗ trợ video.
+            </video>
+
+            <h3 style="margin-top: 30px;">Video từ YouTube</h3>
+            <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="footer">
+        Bản quyền © 2025 - Website phim hoạt hình cho trẻ em
+    </div>
+</div>
+</body>
+</html>
