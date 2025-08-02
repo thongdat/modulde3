@@ -1,0 +1,30 @@
+.external_style{
+    background-color: #F6FCEEFF;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #222;
+    line-height: 1.6;
+    margin: 40px;
+}
+
+.vanban {
+    text-align: justify;
+    text-indent: 40px;
+    font-size: 18px;
+}
+
+.highlight {
+    color: darkblue;
+    font-weight: bold;
+}
+
+.warning {
+    color: purple;
+    font-style: italic;
+}
+
+.bold {
+    font-weight: bold;
+}
